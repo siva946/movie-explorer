@@ -11,7 +11,6 @@ function MovieCard({ movie }) {
         <img
           src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/400"}
           alt={movie.Title}
-          //AIzaSyAH9v-ULi-PDBK8oM_pObrzWaGSNHc3QZI
         />
       </div>
     </Link>
