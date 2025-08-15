@@ -37,7 +37,7 @@ function MovieDetails() {
 
   // Search Internet Archive for Public Domain
 useEffect(() => {
-  fetch("http://localhost:5000/api/archive")
+  fetch("https://movie-explorer-qvf8.onrender.com/api/archive")
     .then(res => {
       if (!res.ok) throw new Error("Network response was not ok");
       return res.json();
