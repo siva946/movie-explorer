@@ -52,7 +52,7 @@ useEffect(() => {
 }, []);
 
   if (!movie) {
-    return <h2 style={{ textAlign: "center" }}>Loading movie details…</h2>;
+    return <h2 style={{ textAlign: "center",paddingTop:"350px"}}>Loading movie details…</h2>;
   }
 
   return (
