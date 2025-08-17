@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import MovieCard from "./components/MovieCard";
 import MovieDetails from "./components/MovieDetails";
-import SearchIcon from "./search.svg";
+import {FaSearch} from 'react-icons/fa';
 
 const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=aad3a173";
 
@@ -31,12 +31,13 @@ function App() {
               <h1>Movie Explorer</h1>
               <div className="search">
                 <input
-                  placeholder="🔍 Search movies..."
+                  placeholder="Search movies..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && searchMovies(searchTerm)}
                 />
-                <img src={SearchIcon} alt="search" onClick={() => searchMovies(searchTerm)} />
+                <FaSearch onClick={()=>searchMovies(searchTerm)}/>
+                {/* <img src={SearchIcon} alt="search" onClick={() => searchMovies(searchTerm)} /> */}
               </div>
 
               <div className="container">

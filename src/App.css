@@ -59,16 +59,6 @@ h1 {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.search img {
-  width: 30px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.search img:hover {
-  transform: scale(1.1);
-}
-
 .container {
   width: 100%;
   margin-top: 3rem;
@@ -130,6 +120,8 @@ h1 {
   text-decoration: none;
   color: #ff8a00;
   font-weight: bold;
+  display:flex;
+  justify-content: flex-start;
 }
 
 .details-container {
@@ -172,4 +164,17 @@ h1 {
 .btn-watch:hover,
 .btn-download:hover {
   transform: scale(1.05);
+}
+@media (max-width:480px){
+  h1{
+    font-size: 2rem;
+  }
+  .search{
+    width: 300px;
+  }
+  .empty h2{
+    font-size: 1.5rem;
+    margin-top: 0;
+    padding-right: 50px;
+  }
 }
