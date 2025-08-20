@@ -9,7 +9,7 @@ app.use(cors()); // Allow requests from anywhere (localhost included)
 // Proxy endpoint
 app.get("/api/archive", async (req, res) => {
   try {
-    const archiveUrl = "https://archive.org/advancedsearch.php?q=title:%22Captain%20Marvel%22&mediatype=movies&output=json";
+    const archiveUrl = `https://archive.org/advancedsearch.php?q= ${title}&mediatype=movies`;
     const response = await fetch(archiveUrl);
 
     if (!response.ok) {
