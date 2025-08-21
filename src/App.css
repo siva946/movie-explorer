@@ -17,3 +17,198 @@
     transform: scale(1.03);
     z-index: 5;
 }
+/* MovieDetails.css - Modern, Responsive Styling */
+.movie-details {
+  min-height: 100vh;
+  padding: 1rem 0;
+  color: #ffffff;
+}
+
+/* Container */
+.details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header Section */
+.details-header {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.details-poster {
+  width: 30%;
+  max-width: 250px; /* smaller poster */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+
+.details-poster:hover {
+  transform: scale(1.02);
+}
+
+.details-info {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-info h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.details-info p {
+  margin-bottom: 0.8rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+}
+
+/* Movie & Episode Player */
+.movie-player,
+.episode-player {
+  margin: 2rem 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movie-player iframe,
+.episode-player iframe,
+.details-info iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-watch {
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  width: 100%;
+  max-width: 280px;
+}
+
+.btn-watch:hover {
+  transform: translateY(-2px);
+}
+
+/* Series Details */
+.series-details {
+  margin-top: 2rem;
+}
+
+.series-details h2 {
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.seasons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.season {
+  flex: 1 1 calc(50% - 1rem);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  max-width: calc(50% - 1rem);
+}
+
+.season button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.season button:hover {
+  color: #00ff88;
+}
+
+.episodes-list {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.episodes-list li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.episodes-list li:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+  .details-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-info {
+    width: 100%;
+  }
+
+  .season {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-watch {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .episodes-list {
+    max-height: 200px;
+  }
+}
