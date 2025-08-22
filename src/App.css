@@ -212,3 +212,20 @@
     max-height: 200px;
   }
 }
+@media(max-width:480px){
+  .Landingpage{
+    padding-top: 0;
+  }
+  .heading{
+    font-size: 3rem;
+  }
+  .sub-heading{
+    font-size: 1rem;
+  }
+  .search-bar{
+    margin-top: 0;
+  }
+  .search-bar input{
+    width:200px;
+  }
+}

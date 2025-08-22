@@ -12,7 +12,8 @@ function Navbar() {
   const [isNavLinkHovered,setIsnavlinkhovered]=useState(null);
 
   return (
-    <header className="d-flex justify-content-between align-items-center bg-dark text-center pt-2 pe-4 px-4" style={{border:"0.5px solid #191e25"}}>
+    <header className="d-flex justify-content-between align-items-center bg-dark text-center pt-2 pe-4 px-4" 
+    style={{border:"0.5px solid #191e25"}}>
       <p style={{color:"white",fontSize:"1.5rem",fontWeight:"bold"}}>ZuuFlix</p>
       <div className="navbar">
         <ul className="navbar-list d-flex justify-content-center gap-4">
@@ -41,5 +42,4 @@ function Navbar() {
     </header>
   );
 }
-
 export default Navbar;

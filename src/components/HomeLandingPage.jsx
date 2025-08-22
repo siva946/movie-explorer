@@ -3,9 +3,9 @@ import MovieCard from "./MovieCard";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const OMDB_API_URL = "https://www.omdbapi.com/?apikey=aad3a173";
+const OMDB_API_URL = process.env.REACT_APP_OMDB_URL;
 const TMDB_API_URL = "https://api.themoviedb.org/3";
-const TMDB_KEY = "def0bfd697b9dff0f0cb305c91dd290d"; // 🔑 Replace with your TMDB key
+const TMDB_KEY = process.env.REACT_APP_TMDB_API; // 🔑 Replace with your TMDB key
 
 function HomeLandingPage() {
   const [movies, setMovies] = useState([]);
@@ -75,7 +75,7 @@ useEffect(()=>{
   return (
     <div className="Landingpage bg-dark d-flex flex-column justify-content-center text-center pt-5">
       <p
-        className="col-12"
+        className="heading col-12"
         style={{ fontSize: "4rem", fontWeight: "700", color: "white" }}
       >
         Discover the{" "}
@@ -84,7 +84,7 @@ useEffect(()=>{
           <br /> Cinema
         </span>
       </p>
-      <p className="col-8 mx-auto" style={{ color: "grey", fontSize: "1.5rem" }}>
+      <p className="sub-heading col-8 mx-auto" style={{ color: "grey", fontSize: "1.5rem" }}>
         Search millions of movies and TV shows. Stream instantly with
         high-quality video playback.
       </p>

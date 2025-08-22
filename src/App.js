@@ -11,12 +11,7 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <HomeLandingPage/>
-          }
-        />
+        <Route path="/" element={<HomeLandingPage/>}/>
         <Route path="/tmdb/:type/:id" element={<MovieDetails />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
