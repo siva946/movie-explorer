@@ -226,6 +226,6 @@
     margin-top: 0 !important;
   }
   .search-bar input{
-    width:200px !important;
+    width:auto !important;
   }
 }
