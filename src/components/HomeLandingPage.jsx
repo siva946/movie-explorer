@@ -21,6 +21,7 @@ function HomeLandingPage() {
     setMovies(data.Search || []);
   };
   
+  
   const fetchTrendingSeries=async()=>{
     setIsSearch(false);
     const response=await fetch(
@@ -119,7 +120,7 @@ useEffect(()=>{
       </div>
 
       {/* 🎥 Movie List */}
-      <div className="row g-4 mt-2">
+      <div className="movies-list">
         {movies.length > 0 ? (
           movies.map((movie) => (
             <div
@@ -139,8 +140,9 @@ useEffect(()=>{
             <p style={{ fontSize: "x-large", fontWeight: "bold" }}>
               Trending TV Shows
             </p>
+             <span style={{ color: "grey" }}>{tvshows.length} results found</span>
           </div>
-      <div className="row g-4 mt-2">
+      <div className="movies-list">
         {
           tvshows.length>0?(
             tvshows.map((show)=>(

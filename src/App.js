@@ -7,6 +7,7 @@ import HomeLandingPage from "./components/HomeLandingPage";
 
 
 function App() {
+  
   return (
     <Router>
       <Navbar/>

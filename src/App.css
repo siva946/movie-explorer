@@ -1,6 +1,9 @@
 *{
     font-family: 'poppins',sans-serif;
 }
+header{
+  display: flex;
+}
 .link-items li{
     color:white;
     transition: all 0.3s ease;
@@ -11,13 +14,27 @@
     color: grey;
 }
 .movie-card{
+  position: relative;
+  flex:200px;
+  scroll-snap-align: start;
     transition: transform 0.3s ease-in-out,z-index 0.3s ease-in-out;
 }
 .movie-card:hover{
     transform: scale(1.03);
     z-index: 5;
 }
-/* MovieDetails.css - Modern, Responsive Styling */
+.movies-list{
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.movies-list::-webkit-scrollbar{
+  display: none;
+}
+
 .movie-details {
   min-height: 100vh;
   padding: 1rem 0;
@@ -213,6 +230,15 @@
   }
 }
 @media(max-width:480px){
+  header{
+    display: block !important;
+    grid-row: auto;
+    grid-column:auto;
+  }
+
+  .link-items :nth-last-child(3){
+    display: none !important;
+  }
   .Landingpage{
     padding-top: 0rem !important;
   }
@@ -227,5 +253,15 @@
   }
   .search-bar input{
     width:auto !important;
+  }
+  .movies-list div{
+    margin-top: 0 !important;
+    width: 50%;
+  }
+  .movie-card h6{
+    font-size: 12px;
+  }
+  .movie-card small{
+    font-size: 10px;
   }
 }
