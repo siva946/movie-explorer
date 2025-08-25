@@ -5,8 +5,8 @@ import { useState } from "react";
 function Navbar() {
   const navbarItems = [
     { name: "Home", link: "/" },
-    { name: "Movies", link: "/movies" },
-    { name: "Series", link: "/series" },
+    { name: "Movies", link: "/movie" },
+    { name: "Series", link: "/tv" },
     { name: "My List", link: "/Mylist" },
   ];
   const [isNavLinkHovered,setIsnavlinkhovered]=useState(null);
@@ -44,7 +44,7 @@ const toggleSidebar=()=>{
       <div className="other-links text-white">
         <ul className="link-items d-flex justify-content-center gap-4">
           <li>
-            <FaSearch />
+            <FaSearch/>
           </li>
           <li>
             <FaBell />
